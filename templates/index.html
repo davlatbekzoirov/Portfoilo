@@ -1,0 +1,1164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<title>Davlatbek Zoirov</title>
+		<meta
+			content="Bu yerda siz o'zingizga kerakli bo'lgan ma'lumotlarni bemalol topa olasiz hurmat bilan Davlatbek Zoirov:)"
+			name="description"
+		/>
+		<meta content="" name="keywords" />
+
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Vendor CSS Files -->
+		<link
+			href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+			rel="stylesheet"
+		/>
+		<link
+			href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+			rel="stylesheet"
+		/>
+		<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+		<link
+			href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}"
+			rel="stylesheet"
+		/>
+		<link
+			href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+			rel="stylesheet"
+		/>
+
+		<link href="{% static 'assets/css/main.css' %}" rel="stylesheet" />
+		<link href="{% static 'style.css' %}" rel="stylesheet" />
+		<style>
+			/* Hero Section */
+			#hero {
+				position: relative; /* Ensures that absolute positioning of child elements is relative to this section */
+				background-color: #d0d8df; /* Background color */
+				padding: 120px 0;
+				text-align: center;
+				color: white;
+			}
+
+			/* Title and description styling */
+			#hero h2 {
+				font-size: 52px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+
+			#hero p {
+				font-size: 24px;
+				margin-bottom: 30px;
+			}
+
+			/* Social links styling */
+			.social-links a {
+				color: white;
+				font-size: 24px;
+				margin: 0 10px;
+				transition: color 0.3s ease;
+			}
+
+			.social-links a:hover {
+				color: #3498db; /* Light blue on hover */
+			}
+
+			/* Responsive adjustments for mobile */
+			@media (max-width: 768px) {
+				#hero img {
+					position: relative; /* Change to relative on smaller screens */
+					width: 80%; /* Adjust width as necessary */
+					height: auto; /* Keep aspect ratio */
+					left: 0; /* Center the image */
+					top: 0; /* Remove top positioning */
+					margin: 0 auto; /* Center the image horizontally */
+				}
+
+				#hero h2 {
+					font-size: 36px; /* Smaller font size on mobile */
+				}
+
+				#hero p {
+					font-size: 18px; /* Smaller font size on mobile */
+				}
+			}
+		</style>
+	</head>
+
+	<body class="index-page">
+		<header
+			id="header"
+			class="header d-flex flex-column justify-content-center"
+		>
+			<i class="header-toggle d-xl-none bi bi-list"></i>
+
+			<nav id="navmenu" class="navmenu">
+				<ul>
+					<li>
+						<a href="{% url 'index' %}#hero" class="active"
+							><i class="bi bi-house navicon"></i
+							><span id="homeText">Home</span></a
+						>
+					</li>
+					<li>
+						<a href="{% url 'index' %}#about"
+							><i class="bi bi-person navicon"></i
+							><span id="aboutText">About</span></a
+						>
+					</li>
+					<li>
+						<a href="{% url 'index' %}#resume"
+							><i class="bi bi-file-earmark-text navicon"></i
+							><span id="resumeText">Resume</span></a
+						>
+					</li>
+					<li>
+						<a href="{% url 'index' %}#services">
+							<i class="bi bi-brush navicon"></i>
+							<span>Skills</span>
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'index' %}#portfolio"
+							><i class="bi bi-images navicon"></i
+							><span id="portfolioText">Portfolio</span></a
+						>
+					</li>
+					<li>
+						<a href="{% url 'index' %}#contact"
+							><i class="bi bi-envelope navicon"></i
+							><span id="contactText">Contact</span></a
+						>
+					</li>
+				</ul>
+				<ul class="language-nav">
+					<li>
+						<a href="javascript:void(0)" onclick="changeLanguage('en')"
+							><i class="bi bi-translate navicon"></i> <span>English</span></a
+						>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="changeLanguage('uz')"
+							><i class="bi bi-translate navicon"></i> <span>O'zbek</span></a
+						>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="changeLanguage('ru')"
+							><i class="bi bi-translate navicon"></i> <span>Русский</span></a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="main">
+			<!-- Hero Section -->
+			<section id="hero" class="hero section light-background">
+				<div class="container" data-aos="zoom-out">
+					<div class="row justify-content-center">
+						<div class="col-lg-9 text-center">
+							<h2 id="heroTitle">Davlatbek Zoirov</h2>
+							<p id="heroDescription">
+								I'm
+								<span
+									class="typed"
+									data-typed-items="Developer, Freelancer, Software Engineer"
+									>Software Engineer</span
+								>
+								<span
+									class="typed-cursor typed-cursor--blink"
+									aria-hidden="true"
+								></span>
+							</p>
+							<div class="social-links">
+								<a href="https://github.com/davlatbekzoirov"
+									><i class="bi bi-github"></i
+								></a>
+								<a
+									href="https://www.linkedin.com/in/davlatbek-zoirov-680a69316/"
+									><i class="bi bi-linkedin"></i
+								></a>
+								<a href="https://www.instagram.com/zoirov_davlatbek"
+									><i class="bi bi-instagram"></i
+								></a>
+								<a href="https://t.me/davlatbekzoirov"
+									><i class="bi bi-telegram"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					<img
+						class="position-lg-absolute col-12 col-lg-10 col-xl-11 col-xxl-10 px-lg-5 px-xl-0 ms-n5 ms-sm-n8 ms-md-n10 ms-lg-0 mb-md-4 mb-lg-0"
+						src="https://telegra.ph/file/fb84ba3b8aba4a880b99f.png"
+						srcset="https://telegra.ph/file/fb84ba3b8aba4a880b99f.png"
+						alt=""
+						style="
+							top: 10%;
+							left: 10%;
+							width: auto;
+							height: 80%;
+							animation-name: fadeIn;
+							animation-duration: 700ms;
+							animation-timing-function: ease;
+							animation-delay: 0ms;
+							animation-direction: normal;
+							animation-fill-mode: both;
+						"
+						data-show="true"
+					/>
+				</div>
+			</section>
+			<!-- /Hero Section -->
+
+			<!-- /Hero Section -->
+
+			<!-- About Section -->
+			<section id="about" class="about section">
+				<!-- Section Title -->
+				<div class="container section-title" data-aos="fade-up">
+					<h2 id="aboutTitle">About</h2>
+				</div>
+				<!-- End Section Title -->
+
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+					<div class="row gy-4 justify-content-center">
+						<div class="col-lg-4">
+							<img
+								src="{% static 'assets/img/profile-img.jpg' %}"
+								class="img-fluid"
+								alt=""
+							/>
+						</div>
+						<div class="col-lg-8 content">
+							<h2 id="aboutRole">Software Engeneer</h2>
+							<p class="fst-italic py-3" id="aboutBio">
+								A software engineer is a professional who specializes in the
+								design, development, installation, and maintenance of software
+								systems
+							</p>
+							<div class="row">
+								<div class="col-lg-6">
+									<ul>
+										<li>
+											<i class="bi bi-chevron-right"></i>
+											<strong>Birthday:</strong>
+											<span id="birthday">20 November 2008</span>
+										</li>
+										<li>
+											<i class="bi bi-chevron-right"></i>
+											<strong>Website:</strong>
+											<span id="website">www.example.com</span>
+										</li>
+										<li>
+											<i class="bi bi-chevron-right"></i>
+											<strong>City:</strong>
+											<span id="city">Tashkent; Uzbekistan</span>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-6">
+									<ul>
+										<li>
+											<i class="bi bi-chevron-right"></i> <strong>Age:</strong>
+											<span id="age">16</span>
+										</li>
+										<li>
+											<i class="bi bi-chevron-right"></i>
+											<strong>Degree:</strong>
+											<span id="degree">Junior Developer</span>
+										</li>
+										<li>
+											<i class="bi bi-chevron-right"></i>
+											<strong>Email:</strong>
+											<span id="email">davlatbekzoirov08@gmail.com</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /About Section -->
+
+			<!-- Skills Section -->
+			<section id="skills" class="skills section">
+				<!-- Section Title -->
+				<div class="container section-title" data-aos="fade-up">
+					<h2>Skills</h2>
+					<p>
+						Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+						consectetur velit
+					</p>
+				</div>
+				<!-- End Section Title -->
+
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+					<div class="row skills-content skills-animation">
+						<div class="col-lg-6">
+							<div class="progress">
+								<span class="skill"
+									><span>Python</span> <i class="val">30%</i></span
+								>
+								<div class="progress-bar-wrap">
+									<div
+										class="progress-bar"
+										role="progressbar"
+										aria-valuenow="100"
+										aria-valuemin="0"
+										aria-valuemax="100"
+									></div>
+								</div>
+							</div>
+							<!-- End Skills Item -->
+
+							<div class="progress">
+								<span class="skill"><span>C</span> <i class="val">10%</i></span>
+								<div class="progress-bar-wrap">
+									<div
+										class="progress-bar"
+										role="progressbar"
+										aria-valuenow="90"
+										aria-valuemin="0"
+										aria-valuemax="100"
+									></div>
+								</div>
+							</div>
+							<!-- End Skills Item -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /Skills Section -->
+
+			<!-- Resume Section -->
+			<section id="resume" class="resume section">
+				<!-- Section Title -->
+				<div class="container section-title" data-aos="fade-up">
+					<h2 id="resumeTitle">Resume</h2>
+				</div>
+				<!-- End Section Title -->
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+							<h3 class="resume-title" id="summaryTitle">Summary</h3>
+							<div class="resume-item pb-0">
+								<h4 id="personName">Davlatbek Zoirov</h4>
+								<p>
+									<em id="personDescription"
+										>Innovative and deadline-driven Graphic Designer with 3+
+										years of experience designing and developing user-centered
+										digital/print marketing material from initial concept to
+										final, polished deliverable.</em
+									>
+								</p>
+								<ul>
+									<li id="address">Portland par 127, Orlando, FL</li>
+									<li id="phone">(123) 456-7891</li>
+									<li id="email">alice.barkley@example.com</li>
+								</ul>
+							</div>
+							<!-- End Resume Item -->
+
+							<h3 class="resume-title" id="educationTitle">Education</h3>
+							<div class="resume-item">
+								<h4 id="masterDegree">
+									Master of Fine Arts &amp; Graphic Design
+								</h4>
+								<h5 id="masterYear">2015 - 2016</h5>
+								<p>
+									<em id="masterInstitute"
+										>Rochester Institute of Technology, Rochester, NY</em
+									>
+								</p>
+								<p id="masterDescription">
+									Qui deserunt veniam. Et sed aliquam labore tempore sed
+									quisquam iusto autem sit. Ea vero voluptatum qui ut
+									dignissimos deleniti nerada porti sand markend
+								</p>
+							</div>
+							<!-- End Resume Item -->
+
+							<div class="resume-item">
+								<h4 id="bachelorDegree">
+									Bachelor of Fine Arts &amp; Graphic Design
+								</h4>
+								<h5 id="bachelorYear">2010 - 2014</h5>
+								<p>
+									<em id="bachelorInstitute"
+										>Rochester Institute of Technology, Rochester, NY</em
+									>
+								</p>
+								<p id="bachelorDescription">
+									Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
+									reiciendis et quis Eius vel ratione eius unde vitae rerum
+									voluptates asperiores voluptatem Earum molestiae consequatur
+									neque etlon sader mart dila
+								</p>
+							</div>
+							<!-- End Resume Item -->
+						</div>
+
+						<div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+							<h3 class="resume-title" id="experienceTitle">
+								Professional Experience
+							</h3>
+							<div class="resume-item">
+								<h4 id="seniorPosition">Senior Graphic Design Specialist</h4>
+								<h5 id="seniorYear">2019 - Present</h5>
+								<p><em id="seniorCompany">Experion, New York, NY</em></p>
+								<ul>
+									<li id="seniorTask1">
+										Lead in the design, development, and implementation of
+										graphic, layout, and production communication materials
+									</li>
+									<li id="seniorTask2">
+										Delegate tasks to the 7 members of the design team and
+										provide counsel on all aspects of the project.
+									</li>
+									<li id="seniorTask3">
+										Supervise the assessment of all graphic materials to ensure
+										quality and accuracy of the design
+									</li>
+									<li id="seniorTask4">
+										Oversee the efficient use of production project budgets
+										ranging from $2,000 - $25,000
+									</li>
+								</ul>
+							</div>
+							<!-- End Resume Item -->
+
+							<div class="resume-item">
+								<h4 id="graphicPosition">Graphic Design Specialist</h4>
+								<h5 id="graphicYear">2017 - 2018</h5>
+								<p>
+									<em id="graphicCompany"
+										>Stepping Stone Advertising, New York, NY</em
+									>
+								</p>
+								<ul>
+									<li id="graphicTask1">
+										Developed numerous marketing programs (logos, brochures,
+										infographics, presentations, and advertisements).
+									</li>
+									<li id="graphicTask2">
+										Managed up to 5 projects or tasks at a given time while
+										under pressure
+									</li>
+									<li id="graphicTask3">
+										Recommended and consulted with clients on the most
+										appropriate graphic design
+									</li>
+									<li id="graphicTask4">
+										Created 4+ design presentations and proposals a month for
+										clients and account managers
+									</li>
+								</ul>
+							</div>
+							<!-- End Resume Item -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- /Resume Section -->
+
+			<!-- Portfolio Section -->
+			<section id="portfolio" class="portfolio section">
+				<!-- Section Title -->
+				<div class="container section-title" data-aos="fade-up">
+					<h2>Portfolio</h2>
+				</div>
+				<!-- End Section Title -->
+
+				<div class="container">
+					<div
+						class="isotope-layout"
+						data-default-filter="*"
+						data-layout="masonry"
+						data-sort="original-order"
+					>
+						<ul
+							class="portfolio-filters isotope-filters"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<li data-filter="*" class="filter-active">All</li>
+							{% for portfolio in portfolios %}
+							<li data-filter="{{ portfolio.technologies|lower }}">
+								{{ portfolio.title }}
+							</li>
+							{% endfor %}
+						</ul>
+						<!-- End Portfolio Filters -->
+
+						<div
+							class="row gy-4 isotope-container"
+							data-aos="fade-up"
+							data-aos-delay="200"
+						>
+							{% for portfolio in portfolios %}
+							<div
+								class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ portfolio.technologies|lower }}"
+							>
+								<img
+									src="{{ portfolio.image.url }}"
+									class="img-fluid"
+									alt="{{ portfolio.title }}"
+								/>
+								<div class="portfolio-info">
+									<h4>{{ portfolio.title }}</h4>
+									<p>{{ portfolio.description }}</p>
+									<p class="technologies">{{ portfolio.technologies }}</p>
+									<!-- Texnologiyalar -->
+									<a
+										href="{{ portfolio.image.url }}"
+										title="{{ portfolio.title }}"
+										data-gallery="portfolio-gallery-{{ portfolio.technologies|lower }}"
+										class="glightbox preview-link"
+										><i class="bi bi-zoom-in"></i
+									></a>
+									<a href="/" title="Ko'proq ma'lumot" class="details-link"
+										><i class="bi bi-link-45deg"></i
+									></a>
+								</div>
+							</div>
+							{% empty %}
+							<p>No portfolio items found.</p>
+							{% endfor %}
+						</div>
+						<!-- End Portfolio Container -->
+					</div>
+				</div>
+			</section>
+			<!-- /Portfolio Section -->
+
+			<!-- Services Section -->
+			<section id="services" class="services section-bg">
+				<div class="container">
+					<div class="section-title">
+						<h2>Skills</h2>
+						<p>
+							Discover the range of services we offer to help you achieve your
+							goals.
+						</p>
+					</div>
+
+					<div class="row">
+						<!-- Django Service Item -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up">
+							<div class="service-item item-cyan position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'Expert Django Development')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-gear"></i>
+								</div>
+								<a href="https://www.djangoproject.com/" class="stretched-link">
+									<h3>Django Development</h3>
+								</a>
+								<p>
+									Expert Django development services for building scalable,
+									secure, and high-performance web applications. We specialize
+									in creating custom web solutions with clean and maintainable
+									code using Django.
+								</p>
+							</div>
+						</div>
+						<!-- End Django Service Item -->
+
+						<!-- GitLab Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="500"
+						>
+							<div class="service-item item-violet position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'GitLab Integration Services')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-git"></i>
+								</div>
+								<a
+									href="https://github.com/davlatbekzoirov"
+									class="stretched-link"
+								>
+									<h3>GitLab Integration</h3>
+								</a>
+								<p>
+									Seamlessly integrate GitLab for version control and continuous
+									integration. Our GitLab services ensure effective
+									collaboration, streamlined development workflows, and improved
+									project management.
+								</p>
+							</div>
+						</div>
+						<!-- End GitLab Service Item -->
+
+						<!-- GitHub Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="1000"
+						>
+							<div class="service-item item-blue position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'GitHub Integration Services')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-github"></i>
+								</div>
+								<a
+									href="https://github.com/davlatbekzoirov"
+									class="stretched-link"
+								>
+									<h3>GitHub Integration</h3>
+								</a>
+								<p>
+									We offer comprehensive GitHub integration for managing code,
+									collaboration, and continuous delivery. Enhance your team's
+									productivity with our GitHub services for streamlined code
+									management and deployment.
+								</p>
+							</div>
+						</div>
+						<!-- End GitHub Service Item -->
+
+						<!-- Ngrok Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="1500"
+						>
+							<div class="service-item item-red position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'Ngrok Tunneling Services')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-wifi"></i>
+								</div>
+								<a href="https://ngrok.com/" class="stretched-link">
+									<h3>Ngrok Tunneling</h3>
+								</a>
+								<p>
+									Ngrok tunneling allows secure access to localhost servers
+									remotely. With our Ngrok integration services, you can expose
+									servers running on your local machine to the internet with
+									ease, providing reliable access for testing and development
+									purposes.
+								</p>
+							</div>
+						</div>
+						<!-- End Ngrok Service Item -->
+
+						<!-- Nginx Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="1500"
+						>
+							<div class="service-item item-pink position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'Nginx Server Management')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-server"></i>
+								</div>
+								<a href="https://nginx.com/" class="stretched-link">
+									<h3>Nginx Server</h3>
+								</a>
+								<p>
+									Efficiently manage and deploy your web applications with
+									Nginx. Our Nginx services ensure high-performance web server
+									management, load balancing, and reverse proxy solutions for a
+									seamless user experience.
+								</p>
+							</div>
+						</div>
+						<!-- End Nginx Service Item -->
+
+						<!-- PostgreSQL Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="1500"
+						>
+							<div class="service-item item-blue position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'PostgreSQL Database Management')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-database"></i>
+								</div>
+								<a href="https://www.postgresql.org/" class="stretched-link">
+									<h3>PostgreSQL Database</h3>
+								</a>
+								<p>
+									Leverage PostgreSQL, a powerful open-source relational
+									database system, to efficiently manage and store your data. We
+									offer comprehensive PostgreSQL database services, including
+									installation, configuration, and optimization for high
+									performance.
+								</p>
+							</div>
+						</div>
+						<!-- End PostgreSQL Service Item -->
+
+						<!-- Django REST Framework Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="1600"
+						>
+							<div class="service-item item-green position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'Django REST Framework API Development')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-server"></i>
+								</div>
+								<a
+									href="https://www.django-rest-framework.org/"
+									class="stretched-link"
+								>
+									<h3>Django REST Framework (DRF)</h3>
+								</a>
+								<p>
+									Build scalable and secure APIs with Django REST Framework. We
+									offer full API development services, including authentication,
+									permissions, and custom endpoint creation tailored to your
+									application's needs.
+								</p>
+							</div>
+						</div>
+						<!-- End Django REST Framework Service Item -->
+
+						<!-- FastAPI Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="1800"
+						>
+							<div class="service-item item-blue position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'FastAPI Development')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-lightning"></i>
+								</div>
+								<a href="https://fastapi.tiangolo.com/" class="stretched-link">
+									<h3>FastAPI Development</h3>
+								</a>
+								<p>
+									Leverage the high-performance capabilities of FastAPI for
+									modern web applications. We provide full support for building
+									scalable and asynchronous APIs with real-time features.
+								</p>
+							</div>
+						</div>
+						<!-- End FastAPI Service Item -->
+						<!-- Flask Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="2000"
+						>
+							<div class="service-item item-orange position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'Flask Web Development')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-flask"></i>
+								</div>
+								<a
+									href="https://flask.palletsprojects.com/"
+									class="stretched-link"
+								>
+									<h3>Flask Web Development</h3>
+								</a>
+								<p>
+									Develop lightweight, secure, and flexible web applications
+									with Flask. Our team specializes in building RESTful APIs and
+									microservices using this minimalist framework.
+								</p>
+							</div>
+						</div>
+						<!-- End Flask Service Item -->
+
+						<!-- Telegram Bot Development Service Item -->
+						<div
+							class="col-lg-4 col-md-6"
+							data-aos="fade-up"
+							data-aos-delay="2200"
+						>
+							<div class="service-item item-green position-relative">
+								<div
+									class="icon"
+									onmouseover="showTooltip(event, 'Telegram Bot Development')"
+									onmouseout="hideTooltip()"
+								>
+									<svg
+										width="100"
+										height="100"
+										viewBox="0 0 600 600"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											stroke="none"
+											stroke-width="0"
+											fill="#f5f5f5"
+											d="M300,528.7056313018709C371.3933031178905,516.9521764893588,465.6168944129926,523.0589279269421,502.4040201310211,467.5584843753649C545.5964005384818,407.4689786846192,516.0194220672905,329.0365630573036,495.6703227877635,257.1227907730754C477.0733378660864,186.27009786249962,457.3707463550607,118.15768409249736,404.5776854988523,85.58699675861332C348.3248284124377,45.49472718629422,267.4156826606284,57.92002653637861,200.51292450435645,103.15773908779734C132.92463712853265,146.64693476631472,83.091501711752,191.6326586776614,76.1619619827998,248.1579494826533C66.33726188541204,327.7792727213751,72.25180957308966,406.90229427026426,110.47005944715495,469.5387162784862C154.93370183635423,527.3831608038291,239.5865574488682,521.6442225110464,300,528.7056313018709"
+										></path>
+									</svg>
+									<i class="bi bi-telegram"></i>
+								</div>
+								<a href="https://core.telegram.org/bots" class="stretched-link">
+									<h3>Telegram Bot Development</h3>
+								</a>
+								<p>
+									Create interactive and automated Telegram bots to engage your
+									users effectively. Our bots support a wide range of features
+									from messaging to advanced state management.
+								</p>
+							</div>
+						</div>
+						<!-- End Telegram Bot Development Service Item -->
+					</div>
+				</div>
+			</section>
+
+			<!-- /Services Section -->
+
+			<!-- Contact Section -->
+			<section id="contact" class="contact section">
+				<!-- Section Title -->
+				<div class="container section-title" data-aos="fade-up">
+					<h2>Contact Us</h2>
+					<p>
+						If you have any questions or need assistance, feel free to reach out
+						to us!
+					</p>
+				</div>
+				<!-- End Section Title -->
+
+				<div class="container" data-aos="fade" data-aos-delay="100">
+					<div class="row gy-4">
+						<div class="col-lg-4">
+							<div
+								class="info-item d-flex"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								<i class="bi bi-geo-alt flex-shrink-0"></i>
+								<div>
+									<h3>Our Location</h3>
+									<p>Nizomiy 2B-7</p>
+								</div>
+							</div>
+							<!-- End Info Item -->
+
+							<div
+								class="info-item d-flex"
+								data-aos="fade-up"
+								data-aos-delay="300"
+							>
+								<i class="bi bi-telephone flex-shrink-0"></i>
+								<div>
+									<h3>Contact Number</h3>
+									<p>+998 93 578 86 81</p>
+								</div>
+							</div>
+							<!-- End Info Item -->
+
+							<div
+								class="info-item d-flex"
+								data-aos="fade-up"
+								data-aos-delay="400"
+							>
+								<i class="bi bi-envelope flex-shrink-0"></i>
+								<div>
+									<h3>Email Address</h3>
+									<p>davlatbekzoirov08@gmail.com</p>
+								</div>
+							</div>
+							<!-- End Info Item -->
+						</div>
+
+						<div class="col-lg-8">
+							<form
+								action="forms/contact.php"
+								method="post"
+								class="php-email-form"
+								data-aos="fade-up"
+								data-aos-delay="200"
+							>
+								<div class="row gy-4">
+									<div class="col-md-6">
+										<input
+											type="text"
+											name="name"
+											class="form-control"
+											placeholder="Your Name"
+											required=""
+										/>
+									</div>
+
+									<div class="col-md-6">
+										<input
+											type="email"
+											class="form-control"
+											name="email"
+											placeholder="Your Email"
+											required=""
+										/>
+									</div>
+
+									<div class="col-md-12">
+										<input
+											type="text"
+											class="form-control"
+											name="subject"
+											placeholder="Subject"
+											required=""
+										/>
+									</div>
+
+									<div class="col-md-12">
+										<textarea
+											class="form-control"
+											name="message"
+											rows="6"
+											placeholder="Your Message"
+											required=""
+										></textarea>
+									</div>
+
+									<div class="col-md-12 text-center">
+										<div class="loading">Loading</div>
+										<div class="error-message"></div>
+										<div class="sent-message">
+											Your message has been successfully sent. Thank you for
+											contacting us!
+										</div>
+
+										<button type="submit">Send Message</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- End Contact Form -->
+					</div>
+				</div>
+			</section>
+			<!-- /Contact Section -->
+		</main>
+
+		<footer id="footer" class="footer position-relative light-background">
+			<div class="container">
+				<h3 class="sitename">Davlatbek Zoirov</h3>
+				<div class="social-links d-flex justify-content-center">
+					<a href="https://www.linkedin.com/in/davlatbek-zoirov-680a69316/"
+						><i class="bi bi-linkedin"></i
+					></a>
+					<a href="https://www.instagram.com/zoirov_davlatbek"
+						><i class="bi bi-instagram"></i
+					></a>
+					<a href="https://t.me/davlatbekzoirov"
+						><i class="bi bi-telegram"></i
+					></a>
+				</div>
+				<div class="container">
+					<div class="copyright">
+						<span>© 2024 davlatbek.uz</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scroll Top -->
+		<a
+			href="#"
+			id="scroll-top"
+			class="scroll-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
+
+		<!-- Preloader -->
+		<div id="preloader"></div>
+		<script src="{% static 'script.js' %}"></script>
+
+		<script>
+			document.querySelectorAll('.portfolio-filters li').forEach(filter => {
+				filter.addEventListener('click', function () {
+					const filterValue = this.getAttribute('data-filter')
+					document.querySelectorAll('.portfolio-item').forEach(item => {
+						item.style.display = 'none' // Barcha portfel elementlarini yashirish
+						if (item.classList.contains('filter-' + filterValue)) {
+							item.style.display = 'block' // Tanlangan filterga mos elementlarni ko'rsatish
+						}
+						if (filterValue === '*') {
+							item.style.display = 'block' // Agar "All" tanlangan bo'lsa, barchasini ko'rsatish
+						}
+					})
+					// Filter aktif holatini o'zgartirish
+					document.querySelectorAll('.portfolio-filters li').forEach(li => {
+						li.classList.remove('filter-active')
+					})
+					this.classList.add('filter-active')
+				})
+			})
+		</script>
+		<!-- Vendor JS Files -->
+		<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+		<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+		<script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+		<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+		<script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+		<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min' %}.js"></script>
+		<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+		<!-- Main JS File -->
+		<script src="{% static 'assets/js/main.js' %}"></script>
+	</body>
+</html>

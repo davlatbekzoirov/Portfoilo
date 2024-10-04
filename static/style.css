@@ -1,0 +1,32 @@
+.language-selector {
+	margin-top: 20px;
+}
+
+.language-selector button {
+	margin: 0 5px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+}
+
+.language-selector button:hover {
+	background-color: #0056b3;
+}
+
+.hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.hero img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.social-links {
+	margin-top: 20px;
+}
