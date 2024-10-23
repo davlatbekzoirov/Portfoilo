@@ -1096,12 +1096,13 @@
 
 						<div class="col-lg-8">
 							<form
-								action="forms/contact.php"
+								action="{% url 'index' %}"
 								method="post"
 								class="php-email-form"
 								data-aos="fade-up"
 								data-aos-delay="200"
 							>
+								{% csrf_token %}
 								<div class="row gy-4">
 									<div class="col-md-6">
 										<input
@@ -1119,16 +1120,6 @@
 											class="form-control"
 											name="email"
 											placeholder="Your Email"
-											required=""
-										/>
-									</div>
-
-									<div class="col-md-12">
-										<input
-											type="text"
-											class="form-control"
-											name="subject"
-											placeholder="Subject"
 											required=""
 										/>
 									</div>
