@@ -30,3 +30,33 @@
 .social-links {
 	margin-top: 20px;
 }
+
+.theme-toggle{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle button{
+	border: none;
+	background: transparent;
+}
+.theme-toggle button, .theme-toggle button:focus {
+    color: var(--nav-color);
+    font-family: var(--nav-font);
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    border-radius: 50px;
+    background: color-mix(in srgb, var(--default-color), transparent 92%);
+    height: 56px;
+    width: 32%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+#darkTheme:focus, #lightTheme:focus{
+    background-color: #007bff;
+    color: white;
+}

@@ -40,6 +40,10 @@
 
 		<link href="{% static 'assets/css/main.css' %}" rel="stylesheet" />
 		<link href="{% static 'style.css' %}" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+		/>
 		<style>
 			/* Hero Section */
 			#hero {
@@ -170,6 +174,14 @@
 						>
 					</li>
 				</ul>
+				<div class="theme-toggle">
+					<button id="darkTheme" onclick="setDarkTheme()">
+						<i class="uil uil-moon"></i>
+					</button>
+					<button id="lightTheme" onclick="setLightTheme()">
+						<i class="uil uil-brightness"></i>
+					</button>
+				</div>
 			</nav>
 		</header>
 
@@ -1217,7 +1229,7 @@
 		<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
 		<script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
 		<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-		<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min' %}.js"></script>
+		<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
 		<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
 		<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 

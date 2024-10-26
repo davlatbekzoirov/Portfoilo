@@ -266,3 +266,36 @@ changeLanguage('uz');
 
 // Change to Russian
 // changeLanguage('ru');
+function setLightTheme() {
+	document.getElementById('hero').classList.remove('dark-background');
+	document.getElementById('hero').classList.add('light-background');
+	document.getElementById('about').classList.remove('dark-background');
+	document.getElementById('about').classList.add('light-background');
+	document.getElementById('resume').classList.remove('dark-background');
+	document.getElementById('resume').classList.add('light-background');
+	document.getElementById('portfolio').classList.remove('dark-background');
+	document.getElementById('portfolio').classList.add('light-background');
+	document.getElementById('services').classList.remove('dark-background');
+	document.getElementById('services').classList.add('light-background');
+	document.getElementById('contact').classList.remove('dark-background');
+	document.getElementById('contact').classList.add('light-background');
+	document.getElementById('footer').classList.remove('dark-background');
+	document.getElementById('footer').classList.add('light-background');
+}
+
+function setDarkTheme() {
+	document.getElementById('hero').classList.remove('light-background');
+	document.getElementById('hero').classList.add('dark-background');
+	document.getElementById('about').classList.remove('light-background');
+	document.getElementById('about').classList.add('dark-background');
+	document.getElementById('resume').classList.remove('light-background');
+	document.getElementById('resume').classList.add('dark-background');
+	document.getElementById('portfolio').classList.remove('light-background');
+	document.getElementById('portfolio').classList.add('dark-background');
+	document.getElementById('services').classList.remove('light-background');
+	document.getElementById('services').classList.add('dark-background');
+	document.getElementById('contact').classList.remove('light-background');
+	document.getElementById('contact').classList.add('dark-background');
+	document.getElementById('footer').classList.remove('light-background');
+	document.getElementById('footer').classList.add('dark-background');
+}
