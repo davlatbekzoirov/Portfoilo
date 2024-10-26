@@ -467,9 +467,9 @@
 						>
 							<li data-filter="*" class="filter-active">All</li>
 							{% for portfolio in portfolios %}
-							<li data-filter="{{ portfolio.technologies|lower }}">
-								{{ portfolio.title }}
-							</li>
+								<li data-filter="{{ portfolio.technologies|lower }}">
+									{{ portfolio.title }}
+								</li>
 							{% endfor %}
 						</ul>
 						<!-- End Portfolio Filters -->
