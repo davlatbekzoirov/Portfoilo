@@ -15,3 +15,7 @@ class PortfolioAdmin(admin.ModelAdmin):
 @admin.register(Technology)
 class TechnologyAdmin(admin.ModelAdmin):
 	list_display = ('name',)
+
+
+
+
